@@ -18,7 +18,6 @@ local function tree(folder)
         if part.Name == "Checkpoint" and part:IsA("BasePart") then
             part.Touched:Connect(function(hit)
                 local character = hit.Parent
-                
                 if character ~= player.Character then
                     return
                 end

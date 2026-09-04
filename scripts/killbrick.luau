@@ -16,7 +16,11 @@ local function tree(folder)
         if part.Name == "KillBrick" and part:IsA("BasePart") then
             part.Touched:Connect(function(hit)
                 local character = hit.Parent
-                local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+                if character ~= player.Character then
+                    return
+                end
+
+                local humanoid = character:FindFirstChildOfClass("Humanoid")
                 if humanoid then
                     humanoid:TakeDamage(100)
                 end
