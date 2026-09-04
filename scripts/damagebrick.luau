@@ -24,10 +24,15 @@ local function tree(folder)
                 local damage = tonumber(string.sub(name, 13))
                 if damage then
                     part.Touched:Connect(function(hit)
-                        if debounce then return end
+                        if debounce then return end   
+
                         local character = hit.Parent
-                        local humanoid = character and character:FindFirstChildOfClass("Humanoid")
-                        if humanoid then
+                        if character ~= player.Character then
+                            return
+                        end
+
+                        local humanoid = character:FindFirstChildOfClass("Humanoid")
+                        if humanoid then 
                             debounce = true
                             humanoid:TakeDamage(damage)
                             task.wait(debounce_timer)
