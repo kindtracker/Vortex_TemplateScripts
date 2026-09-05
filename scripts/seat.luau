@@ -2,7 +2,6 @@
 -- Made by kindtracker
 
 local Players = game:GetService("Players")
-local UserInput = game:GetService("UserInputService")
 
 local player = Players.LocalPlayer
 local part = script.Parent
@@ -18,20 +17,17 @@ part.Touched:Connect(function(hit)
     sitting = true
 end)
 
-UserInput.InputBegan:Connect(function(inputObject)
-    if not sitting then return end
-    if inputObject.KeyCode ~= Enum.KeyCode.Space then return end
-
-    sitting = false
-    cooldown = true
-    task.wait(1)
-    cooldown = false
-end)
-
 while task.wait(0.01) do
     if sitting and character then
         local hrp = character:FindFirstChild("HumanoidRootPart")
-        if hrp then
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+        if humanoid and humanoid:GetState() == Enum.HumanoidStateType.Jumping then
+            sitting = false
+            cooldown = true
+            task.wait(1)
+            cooldown = false
+        elseif hrp then
             hrp.CFrame = part.CFrame
         end
     end
