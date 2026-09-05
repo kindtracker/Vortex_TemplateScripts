@@ -5,12 +5,12 @@ local Players = game:GetService("Players")
 local UserInput = game:GetService("UserInputService")
 
 local player = Players.LocalPlayer
-local parent = script.Parent
+local part = script.Parent
 local sitting = false
 local cooldown = false
 local character
 
-parent.Touched:Connect(function(hit)
+part.Touched:Connect(function(hit)
     if cooldown then return end
     if hit.Parent ~= player.Character then return end
 
@@ -32,7 +32,7 @@ while task.wait(0.01) do
     if sitting and character then
         local hrp = character:FindFirstChild("HumanoidRootPart")
         if hrp then
-            hrp.CFrame = parent.CFrame
+            hrp.CFrame = part.CFrame
         end
     end
 end
