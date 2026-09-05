@@ -1,4 +1,4 @@
--- Add this script in any part you wanna be a killbrick
+-- Add this localscript in any part you wanna be a killbrick
 -- Made by kindtracker
 
 local Players = game:GetService("Players")

@@ -1,4 +1,4 @@
--- Add this script in any part you wanna be a damagebrick
+-- Add this localscript in any part you wanna be a damagebrick
 -- You can change debounce_timer and damage variables
 -- Made by kindtracker
 

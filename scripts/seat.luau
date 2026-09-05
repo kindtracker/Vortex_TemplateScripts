@@ -1,4 +1,4 @@
--- Add this script in any part you wanna be a seat
+-- Add this localscript in any part you wanna be a seat
 -- Made by kindtracker
 
 local Players = game:GetService("Players")

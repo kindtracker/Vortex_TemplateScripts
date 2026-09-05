@@ -1,4 +1,4 @@
--- Add this script in StarterPlayerScripts (You can rename the script)
+-- Add this localscript in StarterPlayerScripts (You can rename the script)
 --[[
 How do I make Teleporter:
 Create teleporters in Workspace. You need to change

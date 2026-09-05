@@ -1,4 +1,4 @@
--- Add this script in StarterPlayerScripts
+-- Add this localscript in StarterPlayerScripts
 --[[
 How do I make a checkpoint:
 Create a part in Workspace or any folder that's in Workspace,
