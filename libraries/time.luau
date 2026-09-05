@@ -1,7 +1,6 @@
 -- Put this anywhere
 --[[
 How to get time:
-You need to initialize the time library.
 Get the "time" attribute from the script. Time is in seconds.
 ]]
 -- Made by kindtracker
